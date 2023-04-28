@@ -2,7 +2,7 @@
 
 This is a solo project by [Scrimba's Frontend Career Path](https://scrimba.com/learn/frontend "Scrimba's frontend career path web page") for pro members
 
-#### [VIEW LIVE VERSION]()
+#### [VIEW LIVE VERSION](https://basketball-scoreboard-awcoetzer.netlify.app)
 
 ![Scrimba Logo](./resources/images/readme/scrimba-logo-1550x500.png "Scrimba Logo")
 
