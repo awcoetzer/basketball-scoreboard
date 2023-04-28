@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a solo project given by Scrimba's 
+    frontend career path, to create a basketball scoreboard counter, using what 
+    we learn't in module 3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Basketball Scoreboard Counter | Module 3 | Scrimba</title>
+  <link rel="stylesheet" href="./resources/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+
+  </header>
+  <main class="main">
+    <!-- section hero -->
+    <section class="section-padding section-hero">
+      <div class="container container--hero">
+        <div class="hero">
+          <!-- hero text box -->
+          <div class="hero-text-box">
+              <span class="pre-heading">Scrimba: Module 3</span>
+              <h1 class="heading-primary">
+                Basketball Scoreboard Counter
+              </h1>
+              <p class="hero-text">
+                Within this project we are required to make a basketball scoreboard according to the figma design. This is primarily a
+                JavaScript project where we are to use the knowledge gained within module 3 of Scrimba's frontend career path course, we
+                will be doing the HTML & CSS as well.
+              </p>
+              <a href="https://github.com/awcoetzer/basketball-scoreboard" target="_blank" class="link link--hero margin-right-sm">Project Repo</a>
+              <a href="https://scrimba.com/learn/frontend" target="_blank" class="link link--hero scrimba">Learn at Scrimba</a>
+          </div>
+
+          <!-- hero image box -->
+          <picture class="hero-img-box">
+            <source srcset="./resources/images/hero/hero-img.webp" type="image/webp">
+            <source srcset="./resources/images/hero/hero-img-min.png" type="image/png">
+
+            <img src="./resources/images/hero/hero-img-min.png" alt="Images
+          by catalyststuff on Freepik of a cartoon character in basketball clothing, smiling towards the camera and spinning the basketball on his index finger" class="hero-img">
+          </picture>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- section basketball scoreboard required version -->
+    <section class="section-padding section-basketball-scoreboard--required">
+      <!-- The headings container -->
+      <div class="container">
+        <span class="pre-heading">Required Version</span>
+        <h2 class="heading-secondary">Basketball Scoreboard Counter</h2>
+      </div>
+
+      <!-- The Basketball Scoreboard container -->
+      <div class="basketball-scoreboard-counter">
+        <div class="container">
+
+          <div class="basketball-scoreboard">
+            <div class="basketball-scoreboard-project">
+              <!-- Home Scoreboard -->
+              <div class="scoreboard scoreboard--home">
+                <!-- scoreboard header -->
+                <span class="scoreboard-header">Home</span>
+
+                <!-- scoreboard lcd -->
+                <div class="scoreboard-lcd-box">
+                  <span id="home-score-lcd--required" class="scoreboard-lcd-text">0</span>
+                </div>
+
+                <!-- scoreboard btn box -->
+                <div class="scoreboard-btn-box">
+                  <!-- add btn 1 -->
+                  <button class="add-btn" onclick="homeAddOne()">+1</button>
+                  <!-- add btn 2 -->
+                  <button class="add-btn" onclick="homeAddTwo()">+2</button>
+                  <!-- add btn 3 -->
+                  <button class="add-btn" onclick="homeAddThree()">+3</button>
+                </div>
+              </div>
+        
+              <!-- Guest Scoreboard -->
+              <div class="scoreboard scoreboard--guest">
+                <!-- scoreboard header -->
+                <span class="scoreboard-header">Guest</span>
+                
+                <!-- scoreboard lcd -->
+                <div class="scoreboard-lcd-box">
+                  <span id="guest-score-lcd--required" class="scoreboard-lcd-text">0</span>
+                </div>
+                
+                <!-- scoreboard btn box -->
+                <div class="scoreboard-btn-box">
+                  <!-- add btn 1 -->
+                  <button class="add-btn" onclick="guestAddOne()">+1</button>
+                  <!-- add btn 2 -->
+                  <button class="add-btn" onclick="guestAddTwo()">+2</button>
+                  <!-- add btn 3 -->
+                  <button class="add-btn" onclick="guestAddThree()">+3</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- section basketball scoreboard stretch goal version -->
+    <section class="section-padding section-basketball-scoreboard--stretch">
+      <!-- The headings container -->
+      <div class="container">
+        <span class="pre-heading">Stretch Goal Version</span>
+        <h2 class="heading-secondary">Basketball Scoreboard Counter</h2>
+      </div>
+    
+      <!-- The Basketball Scoreboard container -->
+      <div class="basketball-scoreboard-counter">
+        <div class="container">
+    
+          <div class="basketball-scoreboard">
+            <div class="basketball-scoreboard-project basketball-scoreboard-project--design relative">
+              <!-- Home Scoreboard -->
+              <div class="scoreboard scoreboard--home">
+                <!-- scoreboard header -->
+                <span class="scoreboard-header">Home</span>
+    
+                <!-- scoreboard lcd -->
+                <div class="scoreboard-lcd-box relative">
+                  <span id="home-score-lcd--stretch" class="scoreboard-lcd-text lcd-design--score lcd-design--text"></span>
+                  <span id="home-foul-lcd--stretch" class="scoreboard-lcd-text--foul foul-home lcd-design--text lcd-design--foul"></span>
+                </div>
+    
+                <!-- scoreboard btn box -->
+                <div class="scoreboard-btn-box">
+                  <!-- add btn 1 -->
+                  <button class="add-btn add-btn--home add-btn--design">+1</button>
+                  <!-- add btn 2 -->
+                  <button class="add-btn add-btn--home add-btn--design">+2</button>
+                  <!-- add btn 3 -->
+                  <button class="add-btn add-btn--home add-btn--design">+3</button>
+                </div>
+                <button class="foul-btn foul-btn--design">Cause Foul</button>
+              </div>
+
+              <!-- control center -->
+              <div class="control-center">
+                <div class="control-center-container">
+                  <!-- countdown timer -->
+                  <span class="pre-heading scoreboard-timer-heading">timer:</span>
+                  <div class="scoreboard-timer-box lcd-design--timer">
+                    <span class="timer-text"></span>
+                  </div>
+                </div>
+                
+                <div class="control-center-container">
+                  <!-- period indicator -->
+                  <span class="pre-heading scoreboard-period-heading">Period:</span>
+                  <div class="scoreboard-period-box lcd-design--period">
+                    <span class="period-text">1</span>
+                  </div>
+                </div>
+
+                <!-- button to check the winner -->
+                <button id="btn-check-winner" class="control-center-btn">check winner</button>
+
+                <!-- button to start a new round -->
+                <button id="btn-new-game" class="control-center-btn">New Game</button>
+              </div>
+    
+              <!-- Guest Scoreboard -->
+              <div class="scoreboard scoreboard--guest">
+                <!-- scoreboard header -->
+                <span class="scoreboard-header">Guest</span>
+    
+                <!-- scoreboard lcd -->
+                <div class="scoreboard-lcd-box relative">
+                  <span id="guest-score-lcd--stretch" class="scoreboard-lcd-text lcd-design--score lcd-design--text"></span>
+                  <span id="guest-foul-lcd--stretch" class="scoreboard-lcd-text--foul foul-guest lcd-design--text lcd-design--foul"></span>
+                </div>
+    
+                <!-- scoreboard btn box -->
+                <div class="scoreboard-btn-box">
+                  <!-- add btn 1 -->
+                  <button class="add-btn add-btn--guest add-btn--design">+1</button>
+                  <!-- add btn 2 -->
+                  <button class="add-btn add-btn--guest add-btn--design">+2</button>
+                  <!-- add btn 3 -->
+                  <button class="add-btn add-btn--guest add-btn--design">+3</button>
+                </div>
+                <button class="foul-btn foul-btn--design">Cause Foul</button>
+              </div>
+            </div>
+
+            <!-- note -->
+            <p class="side-note center-text">
+              The 'Cause Foul' button, randomly gives the opponent a value of either 0, 3 or 4. This is to simulate the fouls you
+              can get while playing, and the 0 simulates the possibility of missing a free throw. Not sure how basketball works, but this is as close as I could simulate a random event during a match.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- footer section -->
+  <footer class="section-padding footer">
+    <div class="container center-text">
+      <p class="done-by">This project was done by <a href="https://github.com/awcoetzer" class="done-by--link" target="_blank">Andre W. Coetzer</a> | <a href="https://www.freepik.com/free-vector boy-playing-basketball-cartoon-people-sport-icon-concept-isolated-flat-cartoon-style_10920751.htm#query=basketball&position=0&from_view=author" target="_blank" class="done-by--link">Images by catalyststuff</a> on Freepik
+      </p>
+      <p class="image-attribution">
+      
+      </p>
+    </div>
+  </footer>
+  <script src="./resources/javascript/required.js"></script>
+  <script src="./resources/javascript/stretch.js"></script>
+</body>
+
+</html>
