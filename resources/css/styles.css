@@ -97,7 +97,7 @@
 
 @font-face {
   font-family: 'Cursed Space';
-  src: url(../fonts/cursed-timer-ulil-font/CursedTimerUlil-Aznm.ttf);
+  src: url('../fonts/cursed-timer-ulil-font/CursedTimerUlil-Aznm.ttf');
 }
 
 html {
