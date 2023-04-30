@@ -22,7 +22,8 @@ const teamArray = ['home', 'guest'];
 // and to be used with the randomNum func()
 const foulPointsArr = [0, 3, 4];
 
-let homeScoreStr, guestScoreStr, homeFoulStr, guestFoulStr, isGameOver, timer;
+let homeScoreStr, guestScoreStr, homeFoulStr, guestFoulStr, timer;
+let isGameOver = true;
 
 // Basic init function
 const init = function () {
@@ -30,7 +31,7 @@ const init = function () {
   guestScoreStr = 0;
   homeFoulStr = 0;
   guestFoulStr = 0;
-  isGameOver = false;
+  // isGameOver = true;
 
   homeScoreStrEl.textContent = homeScoreStr;
   guestScoreStrEl.textContent = guestScoreStr;
@@ -113,6 +114,7 @@ for (let i = 0; i < foulBtnEl.length; i++) {
 // This allows for the game to be reset and to start
 // the timer countdown.
 newGameBtnEl.addEventListener('click', function () {
+  isGameOver = false;
   init();
 
   const startingMinutes = 40;
