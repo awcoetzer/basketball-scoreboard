@@ -64,7 +64,7 @@ const addPoint = function (btnNum, team, point) {
     if (team === 'home') {
       homeFoulStr += btnNum;
       homeFoulStrEl.textContent = homeFoulStr;
-      
+
       // These 3 lines, is what simulates the random 
       // foul during a match
       let randNum = randomNum();
@@ -136,9 +136,21 @@ newGameBtnEl.addEventListener('click', function () {
     } else if (timerEl.textContent === '5:00') {
       timerEl.style.color = 'var(--project-clr-accent)'
     } else if (timerEl.textContent === '0:00') {
-      isGameOver = true;
+      isGameOver = true
+
+      if (homeScoreStr > guestScoreStr) {
+        homeScoreStrEl.textContent = '👍';
+        guestScoreStrEl.textContent = '👎';
+      } else if (homeScoreStr < guestScoreStr) {
+        guestScoreStrEl.textContent = '👍';
+        homeScoreStrEl.textContent = '👎';
+      } else {
+        homeScoreStrEl.textContent = '👍';
+        guestScoreStrEl.textContent = '👍';
+      }
+
       clearInterval(timer);
-    } 
+    }
   }
 
   // below is how to run this at 40 mins, setting it
@@ -150,22 +162,4 @@ newGameBtnEl.addEventListener('click', function () {
   // const timer = setInterval(countdown, 100)
   // const timer = setInterval(countdown, 10)
   const timer = setInterval(countdown, 1)
-})
-
-// This is just to check the winner, I didn't know how 
-// to do this globally, if that's even possible, so I 
-// placed the check within a event listener.
-checkWinnerBtnEl.addEventListener('click', function () {
-  if (isGameOver) {
-    if (homeScoreStr > guestScoreStr) {
-      homeScoreStrEl.textContent = '👍';
-      guestScoreStrEl.textContent = '👎';
-    } else if (homeScoreStr < guestScoreStr) {
-      guestScoreStrEl.textContent = '👍';
-      homeScoreStrEl.textContent = '👎';
-    } else {
-      homeScoreStrEl.textContent = '👍';
-      guestScoreStrEl.textContent = '👍';
-    }
-  }
 })
